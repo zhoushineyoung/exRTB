@@ -12,7 +12,7 @@ defmodule WebServer.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:cowboy],
+    [applications: [:cowboy, :mustache],
      mod: {WebServer, []}]
   end
 
@@ -27,7 +27,8 @@ defmodule WebServer.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-        {:cowboy, github: "extend/cowboy"}
-        ]
+        {:cowboy, github: "extend/cowboy"},
+        {:mustache,github: "mururu/elixir-mustache"}
+    ]
   end
 end

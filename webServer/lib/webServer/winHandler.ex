@@ -1,4 +1,4 @@
-defmodule WebServer.TopPageHandler do
+defmodule WebServer.WinHandler do
 
   def init(_t,r,[]) do
   {:ok,r,nil}
@@ -26,4 +26,3 @@ defmodule WebServer.TopPageHandler do
   {:ok}
   end
 end
-#  :httpc.request(:get, {'http://172.17.0.3:8080/wins', []}, [], ['body'])
