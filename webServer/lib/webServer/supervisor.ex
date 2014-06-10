@@ -7,7 +7,7 @@ defmodule WebServer.Supervisor do
   end
   def init([]) do
     children = [
-      supervisor(WebServer.appSupervisor, [:a12])
+      supervisor(WebServer.AppSupervisor, [:a12])
       #,worker(WebServer.Worker, [arg1, arg2, arg3])
     ]
     # See http://elixir-lang.org/docs/stable/Supervisor.Behaviour.html

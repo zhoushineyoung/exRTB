@@ -1,7 +1,8 @@
 defmodule WebServer.AppSupervisor do
   use Supervisor.Behaviour
-  def start_link do
+  def start_link(arg) do
     :supervisor.start_link(__MODULE__, [])
+    #{:ok}
   end
   def init([]) do
     children = [
