@@ -14,26 +14,28 @@ defmodule WebServer.TopPageHandler do
   end
   def bid()do
     Mustache.render("{
-  'id': 'lM4Fshngvq',
-  'seatbid': [  {
-    'bid': [    {
-      'id': '1',
-      'impid': '1',
-      'price': 0.493,
-      'nurl': '',
-      'adm': '',
-      'adomain': [''],
-      'iurl': '',
-      'cid': '',
-      'crid': '1192NA==T3Blcm'
-    }],
-    'seat': '121/'
-  }],
-  'cur': 'USD'
-}", [planet: "World!"])
+      'id': '{{id}}',
+      'seatbid': [  {
+      'bid': [    {
+        'id': '{{bid}}',
+        'impid': '{{impid}}',
+        'price': {{price}},
+        'nurl': '{{nurl}}',
+        'adm': '{{adm}}',
+        'adomain': ['{{adomain}}'],
+        'iurl': '{{iurl}}',
+        'cid': '{{cid}}',
+        'crid': '{{crid}}'
+        }],
+      'seat': '{{seat}}'
+      }],
+    'cur': '{{cur}}'
+    }", [planet: "World!"])
   end
   def handle(req,state) do
-  IO.puts :cowboy.body(req)
+  :gen_event.call(:"money",bank,{:getMoney})
+  IO.puts Mustache.render("",[])
+  #:cowboy.body(req)
   #decide
 
   {:ok,req} = :cowboy_req.reply(200,[],"asdasd",req)

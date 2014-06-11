@@ -6,7 +6,7 @@ defmodule WebServer.Money do
 
   end
   def start_link(a) do
-    :gen_event.start_link()
+    :gen_event.start_link({:local, :money })
   end
   def handle_event({:log, x}, messages) do
     {:ok, [x|messages]}
