@@ -13,7 +13,24 @@ defmodule WebServer.TopPageHandler do
 
   end
   def bid()do
-
+    Mustache.render("{
+  'id': 'lM4Fshngvq',
+  'seatbid': [  {
+    'bid': [    {
+      'id': '1',
+      'impid': '1',
+      'price': 0.493,
+      'nurl': '',
+      'adm': '',
+      'adomain': [''],
+      'iurl': '',
+      'cid': '',
+      'crid': '1192NA==T3Blcm'
+    }],
+    'seat': '121/'
+  }],
+  'cur': 'USD'
+}", [planet: "World!"])
   end
   def handle(req,state) do
   IO.puts :cowboy.body(req)
