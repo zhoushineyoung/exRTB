@@ -12,7 +12,7 @@ defmodule WebServer.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:cowboy, :mustache],
+    [applications: [:cowboy, :mustache,:erlvolt],
      mod: {WebServer, []}]
   end
 
@@ -28,7 +28,8 @@ defmodule WebServer.Mixfile do
   defp deps do
     [
         {:cowboy, github: "extend/cowboy"},
-        {:mustache,github: "mururu/elixir-mustache"}
+        {:mustache,github: "mururu/elixir-mustache"},
+        {:erlvolt,github: "VoltDB/voltdb-client-erlang"}
     ]
   end
 end
