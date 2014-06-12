@@ -28,7 +28,7 @@ defmodule WebServer.Mixfile do
   defp deps do
     [
         {:cowboy, github: "extend/cowboy"},
-        {:mustache,github: "NikolaMandic/elixir-mustache"}
+        {:mustache,github: "mururu/elixir-mustache"}
     ]
   end
 end

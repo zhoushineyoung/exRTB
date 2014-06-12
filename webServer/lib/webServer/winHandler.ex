@@ -16,7 +16,7 @@ defmodule WebServer.WinHandler do
 
   end
   def handle(req,state) do
-  :gen_event.call(:"money",bank,{:registerWin})
+  :gen_event.call(:"money",{:registerWin})
   IO.puts :cowboy.body(req)
   #decide
 

@@ -33,7 +33,7 @@ defmodule WebServer.TopPageHandler do
     }", [planet: "World!"])
   end
   def handle(req,state) do
-  :gen_event.call(:"money",bank,{:getMoney})
+  :gen_event.call(:"money",{:getMoney})
   IO.puts Mustache.render("",[])
   #:cowboy.body(req)
   #decide
