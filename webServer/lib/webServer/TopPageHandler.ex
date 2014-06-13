@@ -33,12 +33,13 @@ defmodule WebServer.TopPageHandler do
     }", [planet: "World!"])
   end
   def handle(req,state) do
-  :gen_event.call(:"money",{:getMoney})
-  IO.puts Mustache.render("",[])
-  #:cowboy.body(req)
+    bidPrice=1
+    r = GenEvent.call(:bank,Bank,{:getMoney, bidPrice})
+  IO.puts Mustache.render("{{r}}",[r: r])
+  #r = :cowboy.body(req)
   #decide
 
-  {:ok,req} = :cowboy_req.reply(200,[],"asdasd",req)
+  {:ok,req} = :cowboy_req.reply(200,[],"",req)
   {:ok,req,:state}
   end
   def terminate(_r,_e,s) do
