@@ -12,6 +12,22 @@
 #end
 defmodule Bank do
   use GenEvent
+  def helloWPrototype() do
+    :erlvolt.add_pool(:hello_pool, [{'172.17.0.4', 21212}])
+
+    :erlvolt.call_procedure(:hello_pool, 'Insert', ['a', 's', 'd'])
+
+    result1 = :erlvolt.call_procedure(:hello_pool, 'Select', ['a'])
+
+    table1 = :erlvolt.get_table(result1, 1)
+    row1 = :erlvolt.get_row(table1, 1)
+    hello1 = :erlvolt.get_string(row1, table1, 'HELLO')
+    world1 = :erlvolt.get_string(row1, table1, 'WORLD')
+
+    :io.format('~n~s ~s!~n~n', [hello1, world1])
+
+    :erlvolt.close_pool(:hello_pool)
+  end
   def init() do
     :erlvolt.add_pool(:hello_pool, [{'', 21212}],[user: '',password: ''])
     {:ok,0}
