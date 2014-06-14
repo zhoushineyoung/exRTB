@@ -13,6 +13,7 @@
 defmodule Bank do
   use GenEvent
   def init() do
+    :erlvolt.add_pool(:hello_pool, [{'', 21212}],[user: '',password: ''])
     {:ok,0}
   end
   def handle_call(:balance, balance) do
