@@ -4,7 +4,7 @@ defmodule WebServer.Mixfile do
   def project do
     [app: :webServer,
      version: "0.0.1",
-     elixir: "~> 0.13.2",
+     
      deps: deps]
   end
 
