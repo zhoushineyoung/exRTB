@@ -36,11 +36,12 @@ defmodule WebServer.TopPageHandler do
     bidPrice=1
     r = GenEvent.call(:bank,Bank,{:getMoney, bidPrice})
     IO.puts Mustache.render("{{r}}",[r: r])
-  #r = :cowboy.body(req)
-  #decide
-
-  {:ok,req} = :cowboy_req.reply(200,[],"",req)
-  {:ok,req,:state}
+    
+    #r = :cowboy.body(req)
+    #decide
+    b=bid()
+    {:ok,req} = :cowboy_req.reply(200,[],b,req)
+    {:ok,req,:state}
   end
   def terminate(_r,_e,s) do
   {:ok}

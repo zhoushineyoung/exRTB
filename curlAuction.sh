@@ -1,4 +1,4 @@
-curl -X POST ip:8080/auctions -d '{"user": {"keywords": "cell phones,cell phone plans,smartphones,cell phone accessories,m_area:(null),m_age:15", "gender": "f", "
+curl -X POST $IP:8080/auctions -d '{"user": {"keywords": "cell phones,cell phone plans,smartphones,cell phone accessories,m_area:(null),m_age:15", "gender": "f", "
 yob": 1998}, "badv": ["apple.com", "go-text.me/", "heywire.com/", "http://drawbrid.ge/", "http://itunes.apple.com/us/app/text-me!-2-free-texting-voice/id5144"], "at": 2
 , "imp": [{"bidfloor": 0.65, "tagid": "agltb3B1Yi1pbmNyDQsSBFNpdGUY36KXEgw", "displaymanagerver": "1.10.0.0", "displaymanager": "mopub", "instl": 0, "banner": {"h": 50,
  "pos": 1, "battr": [9, 10], "api": [3], "w": 320, "btype": [4]}, "id": "1"}], "device": {"os": "iOS", "language": "en", "ua": "Mozilla/5.0 (iPhone; U; CPU iPhone 6_1 l

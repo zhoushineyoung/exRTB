@@ -47,7 +47,7 @@ defmodule Bank do
   end
 end
 defmodule WebServer.Money do
-  use GenEvent.Behaviour
+  use GenEvent
 
   # Callbacks
   def init() do

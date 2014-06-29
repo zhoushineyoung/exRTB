@@ -1,5 +1,5 @@
 defmodule WebServer.AppSupervisor do
-  use Supervisor.Behaviour
+  use Supervisor
   def start_link(arg) do
     :supervisor.start_link(__MODULE__, [])
     #{:ok}

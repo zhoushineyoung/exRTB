@@ -1,5 +1,5 @@
 defmodule WebServer.Supervisor do
-  use Supervisor.Behaviour
+  use Supervisor
   import Process
   import Kernel
   def start_link do
