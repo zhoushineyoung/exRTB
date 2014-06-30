@@ -29,7 +29,8 @@ defmodule WebServer.Mixfile do
     [
         {:cowboy, github: "extend/cowboy"},
         {:mustache,github: "mururu/elixir-mustache"},
-        {:erlvolt,github: "VoltDB/voltdb-client-erlang"}
+        {:erlvolt,github: "VoltDB/voltdb-client-erlang"},
+	{:jsex ,github: "talentdeficit/jsex"}
     ]
   end
 end

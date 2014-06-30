@@ -1,6 +1,9 @@
 %{"cowboy": {:git, "git://github.com/extend/cowboy.git", "1ad3aae4d5459ee991805d16a3837e1da2ba96ff", []},
   "cowlib": {:git, "git://github.com/extend/cowlib.git", "f58340a0044856bb508df03cfe94cf79308380a2", [ref: "0.6.1"]},
   "erlvolt": {:git, "git://github.com/VoltDB/voltdb-client-erlang.git", "5f182980386ff90dfde88a273a49712cb4018434", []},
+  "exjson": {:git, "git://github.com/guedes/exjson.git", "9d428acfa2b55d070576e71cef55e2e0bad8c5ab", []},
+  "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "22d1348180f3ade03fe8f00be6084da9a1f673d3", []},
+  "jsx": {:package, "2.0.4"},
   "mustache": {:git, "git://github.com/mururu/elixir-mustache.git", "fe562bf28d0271db7280a9f704e0f7706912ede9", []},
   "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]},
   "voltdb": {:git, "git://github.com/VoltDB/voltdb-client-erlang.git", "5f182980386ff90dfde88a273a49712cb4018434", []}}

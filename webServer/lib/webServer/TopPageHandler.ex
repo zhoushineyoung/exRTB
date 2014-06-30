@@ -2,6 +2,7 @@ defmodule WebServer.TopPageHandler do
 
   def init(_t,r,[]) do
   {:ok,r,nil}
+  #rrCreatives=0
   end
   def findCompatibleCreative() do
 
@@ -9,38 +10,76 @@ defmodule WebServer.TopPageHandler do
   def getBidPrice()do
 
   end
-  def pickCreative()do
-
+  
+  def pickCreative(availableOnes) do
+    # todo make state
+    #rrCreatives=rem(rrCreatives+1,Dict.size(availableOnes))
+    elem(availableOnes,0)
   end
-  def bid()do
-    Mustache.render("{
-      'id': '{{id}}',
-      'seatbid': [  {
-      'bid': [    {
-        'id': '{{bid}}',
-        'impid': '{{impid}}',
-        'price': {{price}},
-        'nurl': '{{nurl}}',
-        'adm': '{{adm}}',
-        'adomain': ['{{adomain}}'],
-        'iurl': '{{iurl}}',
-        'cid': '{{cid}}',
-        'crid': '{{crid}}'
-        }],
-      'seat': '{{seat}}'
-      }],
-    'cur': '{{cur}}'
-    }", [planet: "World!"])
+  def bid(creative,price,cur) do
+#    Mustache.render("{
+#      'id': '{{id}}',
+#      'seatbid': [  {
+#      'bid': [    {
+#        'id': '{{bid}}',
+#        'impid': '{{impid}}',
+#        'price': {{price}},
+#        'nurl': '{{nurl}}',
+#        'adm': '{{adm}}',
+#        'adomain': ['{{adomain}}'],
+#        'iurl': '{{iurl}}',
+#        'cid': '{{cid}}',
+#        'crid': '{{crid}}'
+#        }],
+#      'seat': '{{seat}}'
+#      }],
+#    'cur': '{{cur}}'
+#    }", creative ++ [price: price] ++ [cur: cur])
   end
   def handle(req,state) do
     bidPrice=1
     r = GenEvent.call(:bank,Bank,{:getMoney, bidPrice})
-    IO.puts Mustache.render("{{r}}",[r: r])
+    {_,xx,_} = :cowboy_req.body(req)
+    {:ok, bidrequest}=JSEX.decode(xx)
     
-    #r = :cowboy.body(req)
-    #decide
-    b=bid()
-    {:ok,req} = :cowboy_req.reply(200,[],b,req)
+    availableCreatives={
+	[
+	  id: 0,
+	  w: 320,
+	  h: 50,
+	  iurl: "nikolamandic.github.io/favicon.gif",
+	  adomain: ["nikolamandic.github.io"],
+	  seat: '0'
+	]
+    }
+    
+    
+    
+    creative = pickCreative(availableCreatives)
+    [imp|_]=bidrequest["imp"]
+    nurl="localhost:213"
+    campaign="c"
+    {_,b}=JSEX.encode(
+	%{ 
+	   :id=>bidrequest["id"],
+	    :seatbid=> [ %{
+		      :bid=> [
+		      %{
+        		:id=> '0',
+        		:impid=> imp["id"],
+        		:price=> bidPrice,
+        		:nurl=> nurl,
+        		:adm => "markup",
+        		:adomain=> creative[:adomain],
+        		:iurl=> creative[:iurl],
+        		:cid=> campaign,
+        		:crid=> creative[:id]
+        		}],
+      		      :seat=> '0'
+      	              }],
+            :cur=> "USD"			 
+      })
+    {:ok,req} = :cowboy_req.reply(200,[], b,req)
     {:ok,req,:state}
   end
   def terminate(_r,_e,s) do
