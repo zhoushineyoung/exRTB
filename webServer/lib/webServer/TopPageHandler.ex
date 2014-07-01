@@ -1,7 +1,8 @@
 defmodule WebServer.TopPageHandler do
 
-  def init(_t,r,[]) do
-  {:ok,r,nil}
+  def init(_t,r,s) do
+  
+  {:ok,r,s}
   #rrCreatives=0
   end
   def findCompatibleCreative() do
@@ -36,26 +37,17 @@ defmodule WebServer.TopPageHandler do
 #    'cur': '{{cur}}'
 #    }", creative ++ [price: price] ++ [cur: cur])
   end
-  def handle(req,state) do
+  def handle(req,creatives) do
     bidPrice=1
     r = GenEvent.call(:bank,Bank,{:getMoney, bidPrice})
     {_,xx,_} = :cowboy_req.body(req)
     {:ok, bidrequest}=JSEX.decode(xx)
     
-    availableCreatives={
-	[
-	  id: 0,
-	  w: 320,
-	  h: 50,
-	  iurl: "nikolamandic.github.io/favicon.gif",
-	  adomain: ["nikolamandic.github.io"],
-	  seat: '0'
-	]
-    }
+     
+    #internalCreativeRepresentat
     
     
-    
-    creative = pickCreative(availableCreatives)
+    creative = pickCreative(creatives)
     [imp|_]=bidrequest["imp"]
     nurl="localhost:213"
     campaign="c"
@@ -80,7 +72,7 @@ defmodule WebServer.TopPageHandler do
             :cur=> "USD"			 
       })
     {:ok,req} = :cowboy_req.reply(200,[], b,req)
-    {:ok,req,:state}
+    {:ok,req,[]}
   end
   def terminate(_r,_e,s) do
   {:ok}
