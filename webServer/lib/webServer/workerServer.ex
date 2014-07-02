@@ -13,8 +13,8 @@ defmodule WebServer.WorkerServer do
     {:ok,pid}=WebServer.CreativeIndex.start()
     item=[  	
 	   "0",
-	   "320",
-	   "50",
+	   320,
+	   50,
 	   "nikolamandic.github.io/favicon.gif",
 	   "nikolamandic.github.io",
 	   "IAB"

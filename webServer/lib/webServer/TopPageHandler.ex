@@ -49,11 +49,19 @@ defmodule WebServer.TopPageHandler do
     
     
     #creative = pickCreative(creatives)
-    #IO.puts(elem(creatives[:"32050"][:"IAB"],0))
-    IO.puts(JSEX.encode!(creatives))
+    #whkey=String.to_atom(bidrequest.w <> bidrequest.h)
+    #creative=hd(creatives[whkey][:"IAB"])
+    #banner = hd(bidrequest["imp"])["banner"]
+    #IO.puts(JSEX.encode!(hd(bidrequest["imp"])["banner"]["w"]))
+    
     [imp|_]=bidrequest["imp"]
+    banner=imp["banner"]
+    IO.puts(JSEX.encode!(imp["banner"]))
+    whkey=banner["w"] + banner["h"]
+    creative=hd(creatives[whkey][:"IAB"])
     nurl="localhost:213"
-    campaign="c".
+    campaign="c"
+    [id,iurl,adomain]=creative
     {_,b}=JSEX.encode(
 	%{ 
 	   :id=>bidrequest["id"],
@@ -65,12 +73,12 @@ defmodule WebServer.TopPageHandler do
         		:price=> bidPrice,
         		:nurl=> nurl,
         		:adm => "markup",
-        		#:adomain=> creative[:adomain],
-        		#:iurl=> creative[:iurl],
+        		:adomain=> adomain,
+        		:iurl=> iurl,
         		:cid=> campaign,
-        		#:crid=> creative[:id]
+        		:crid=> id
         		}],
-      		      :seat=> '0'
+      		      :seat=> "0"
       	              }],
             :cur=> "USD"			 
       })

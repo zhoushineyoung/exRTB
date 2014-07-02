@@ -11,7 +11,7 @@ defmodule WebServer.CreativeIndex do
         send caller, state
         loop(state)
       {:put, [id,w,h,iurl,adomain,cat]} ->
-        whkey=String.to_atom(w <> h)
+        whkey=w+h
 	IO.puts("p2")  
     	catt = String.to_atom(cat)
 	c=%{}
