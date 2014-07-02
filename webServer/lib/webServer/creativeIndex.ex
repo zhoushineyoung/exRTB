@@ -13,13 +13,17 @@ defmodule WebServer.CreativeIndex do
       {:put, [id,w,h,iurl,adomain,cat]} ->
         whkey=String.to_atom(w <> h)
 	IO.puts("p2")  
-    	cat = String.to_atom(cat)
-        d=Dict.update(state,whkey,%{},fn(v)->
-		Dict.update!(v,cat,%{},fn(v2)->
-			"asd"
-		end)
-    	end)
-	loop(state)
+    	catt = String.to_atom(cat)
+	c=%{}
+	c=Dict.put_new(c,catt,[])
+	
+        
+	c=Dict.update(c,catt,[],fn(v2)->
+		[[id,iurl,adomain]|v2]
+	end)
+	d = Dict.put_new(state,whkey,c)
+    	
+	loop(d)
     end
   end  
 

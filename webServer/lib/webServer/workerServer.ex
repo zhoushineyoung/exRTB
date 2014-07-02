@@ -28,7 +28,9 @@ defmodule WebServer.WorkerServer do
     dispatch= :cowboy_router.compile([
     {:_,[
          {"/auctions",WebServer.TopPageHandler,stat},
-         {"/wins",WebServer.WinHandler,[]}
+         {"/wins",WebServer.WinHandler,[]} #,
+	 #{"/campaignAdd",WebServer.CampaignManager},
+	 #{"/creativeAdd",WebServer.CampaignManager}
     ]}
     ])
 

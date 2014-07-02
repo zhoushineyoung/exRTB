@@ -1,7 +1,7 @@
 defmodule WebServer.TopPageHandler do
 
   def init(_t,r,s) do
-  
+      IO.puts(JSEX.encode!(s))
   {:ok,r,s}
   #rrCreatives=0
   end
@@ -37,6 +37,7 @@ defmodule WebServer.TopPageHandler do
 #    'cur': '{{cur}}'
 #    }", creative ++ [price: price] ++ [cur: cur])
   end
+  
   def handle(req,creatives) do
     bidPrice=1
     r = GenEvent.call(:bank,Bank,{:getMoney, bidPrice})
@@ -47,10 +48,12 @@ defmodule WebServer.TopPageHandler do
     #internalCreativeRepresentat
     
     
-    creative = pickCreative(creatives)
+    #creative = pickCreative(creatives)
+    #IO.puts(elem(creatives[:"32050"][:"IAB"],0))
+    IO.puts(JSEX.encode!(creatives))
     [imp|_]=bidrequest["imp"]
     nurl="localhost:213"
-    campaign="c"
+    campaign="c".
     {_,b}=JSEX.encode(
 	%{ 
 	   :id=>bidrequest["id"],
@@ -62,10 +65,10 @@ defmodule WebServer.TopPageHandler do
         		:price=> bidPrice,
         		:nurl=> nurl,
         		:adm => "markup",
-        		:adomain=> creative[:adomain],
-        		:iurl=> creative[:iurl],
+        		#:adomain=> creative[:adomain],
+        		#:iurl=> creative[:iurl],
         		:cid=> campaign,
-        		:crid=> creative[:id]
+        		#:crid=> creative[:id]
         		}],
       		      :seat=> '0'
       	              }],
