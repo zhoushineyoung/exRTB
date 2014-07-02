@@ -5,6 +5,7 @@ defmodule WebServer.CreativeIndex do
   end
 
   defp loop(state) do
+    exchangeTemplate="{{iurl}}"
     receive do
       {:get, {}, caller} ->
       	     IO.puts("g2")
@@ -17,9 +18,12 @@ defmodule WebServer.CreativeIndex do
 	c=%{}
 	c=Dict.put_new(c,catt,[])
 	
-        
+        adm=Mustache.render(exchangeTemplate,[iurl: "asdasd"])
+	IO.puts(adm)
 	c=Dict.update(c,catt,[],fn(v2)->
-		[[id,iurl,adomain]|v2]
+		[[id,iurl,adomain,
+			adm]
+			|v2]
 	end)
 	d = Dict.put_new(state,whkey,c)
     	

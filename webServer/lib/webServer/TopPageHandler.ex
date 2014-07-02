@@ -1,7 +1,7 @@
 defmodule WebServer.TopPageHandler do
 
   def init(_t,r,s) do
-      IO.puts(JSEX.encode!(s))
+      #IO.puts(JSEX.encode!(s))
   {:ok,r,s}
   #rrCreatives=0
   end
@@ -61,7 +61,7 @@ defmodule WebServer.TopPageHandler do
     creative=hd(creatives[whkey][:"IAB"])
     nurl="localhost:213"
     campaign="c"
-    [id,iurl,adomain]=creative
+    [id,iurl,adomain,adm]=creative
     {_,b}=JSEX.encode(
 	%{ 
 	   :id=>bidrequest["id"],
@@ -72,7 +72,7 @@ defmodule WebServer.TopPageHandler do
         		:impid=> imp["id"],
         		:price=> bidPrice,
         		:nurl=> nurl,
-        		:adm => "markup",
+        		:adm => adm,
         		:adomain=> adomain,
         		:iurl=> iurl,
         		:cid=> campaign,
