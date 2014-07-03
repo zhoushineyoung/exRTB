@@ -59,28 +59,34 @@ defmodule WebServer.TopPageHandler do
         
     IO.puts(JSEX.encode!(bidrequest["bcat"]))
     whkey=banner["w"] + banner["h"]
-    #creative=hd(creatives[whkey][:"IAB"])
+    
     creativesWithRightSize=creatives[whkey]
     
-    #categoriesEnum.filter(bidrequest["bcat"]),fn(v)->   Dict.has_key?(creativesWithRightSize,v) end)
-    #Enum.filter(Dict.keys(creatives[whkey]),fn(v)-> bidrequest["bcat"] end)
-    cats=Dict.keys creativesWithRightSize
-    Enum.each bidrequest["bcat"] , fn(v)-> 
-    	      IO.puts(v)
-	      cats=Enum.reject cats,fn(v2)->
-	      IO.puts(v)
-	      IO.puts(v2)
+    
+    IO.puts(JSEX.encode!(Dict.to_list creativesWithRightSize))
+    #cats=Dict.take (Dict.to_list creativesWithRightSize),bidrequest["bcat"]
+    cats= Dict.keys creativesWithRightSize
+    
+   cats=Enum.reject cats,fn(v2)->
+	      #IO.puts(v)
+	      #IO.puts(v2)
+	      #IO.puts(v==v2)
+	      Enum.any? bidrequest["bcat"], fn(v)->
 	       v2==v end
-    end
-    if Dict.size cats do
-    creative =hd(creativesWithRightSize[hd(cats)])
-    end
+	       #IO.puts(JSEX.encode!(cats))
+   end
+     
+     IO.puts("a")
+    IO.puts(JSEX.encode!(cats))
+    
+    creative =creativesWithRightSize[hd(cats)]
+    creative=creative["nikolamandic.github.io"]
     b=""
     if creative do
-    IO.puts(JSEX.encode!(cats))
+    IO.puts(JSEX.encode!(creative))
     nurl="localhost:213"
     campaign="c"
-    [id,iurl,adomain,adm]=creative
+    [id,iurl,adomain,adm]=hd(creative)
     {_,b}=JSEX.encode(
 	%{ 
 	   :id=>bidrequest["id"],

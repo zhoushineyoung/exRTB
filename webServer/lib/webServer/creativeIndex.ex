@@ -14,17 +14,20 @@ defmodule WebServer.CreativeIndex do
       {:put, [id,w,h,iurl,adomain,cat]} ->
         whkey=w+h
 	IO.puts("p2")  
-    	catt = String.to_atom(cat)
+    	catt = cat #String.to_atom(cat)
 	c=%{}
-	c=Dict.put_new(c,catt,[])
+#	c=Dict.put_new(c,catt,[])
+	a=%{}
+	a=Dict.put_new(a,adomain,[])
 	
         adm=Mustache.render(exchangeTemplate,[iurl: "asdasd"])
 	IO.puts(adm)
-	c=Dict.update(c,catt,[],fn(v2)->
+	a=Dict.update(a,adomain,[],fn(v2)->
 		[[id,iurl,adomain,
 			adm]
 			|v2]
 	end)
+	c = Dict.put_new(c,catt,a)
 	d = Dict.put_new(state,whkey,c)
     	
 	loop(d)

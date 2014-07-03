@@ -28,7 +28,7 @@ defmodule WebServer.Mixfile do
   defp deps do
     [
         {:cowboy, github: "extend/cowboy"},
-        {:mustache,github: "mururu/elixir-mustache"},
+        {:mustache,github: "NikolaMandic/elixir-mustache"},
         {:erlvolt,github: "VoltDB/voltdb-client-erlang"},
 	{:jsex ,github: "talentdeficit/jsex"}
     ]
