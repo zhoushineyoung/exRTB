@@ -17,7 +17,7 @@ defmodule WebServer.WorkerServer do
 	   50,
 	   "nikolamandic.github.io/favicon.gif",
 	   "nikolamandic.github.io",
-	   "IAB"
+	   "IAB9-9"
 	]
     IO.puts("p1")
     send pid, {:put,item}

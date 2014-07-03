@@ -56,9 +56,28 @@ defmodule WebServer.TopPageHandler do
     
     [imp|_]=bidrequest["imp"]
     banner=imp["banner"]
-    IO.puts(JSEX.encode!(imp["banner"]))
+        
+    IO.puts(JSEX.encode!(bidrequest["bcat"]))
     whkey=banner["w"] + banner["h"]
-    creative=hd(creatives[whkey][:"IAB"])
+    #creative=hd(creatives[whkey][:"IAB"])
+    creativesWithRightSize=creatives[whkey]
+    
+    #categoriesEnum.filter(bidrequest["bcat"]),fn(v)->   Dict.has_key?(creativesWithRightSize,v) end)
+    #Enum.filter(Dict.keys(creatives[whkey]),fn(v)-> bidrequest["bcat"] end)
+    cats=Dict.keys creativesWithRightSize
+    Enum.each bidrequest["bcat"] , fn(v)-> 
+    	      IO.puts(v)
+	      cats=Enum.reject cats,fn(v2)->
+	      IO.puts(v)
+	      IO.puts(v2)
+	       v2==v end
+    end
+    if Dict.size cats do
+    creative =hd(creativesWithRightSize[hd(cats)])
+    end
+    b=""
+    if creative do
+    IO.puts(JSEX.encode!(cats))
     nurl="localhost:213"
     campaign="c"
     [id,iurl,adomain,adm]=creative
@@ -82,6 +101,7 @@ defmodule WebServer.TopPageHandler do
       	              }],
             :cur=> "USD"			 
       })
+      end
     {:ok,req} = :cowboy_req.reply(200,[], b,req)
     {:ok,req,[]}
   end
