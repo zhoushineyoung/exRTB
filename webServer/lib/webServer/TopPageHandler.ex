@@ -79,8 +79,28 @@ defmodule WebServer.TopPageHandler do
      IO.puts("a")
     IO.puts(JSEX.encode!(cats))
     
-    creative =creativesWithRightSize[hd(cats)]
-    creative=creative["nikolamandic.github.io"]
+    creativesWithRightSize =creativesWithRightSize[hd(cats)]
+    creatives=Dict.keys creativesWithRightSize 
+   creatives=Enum.reject creatives, fn(v2)->
+	      #IO.puts(v)
+	      #IO.puts(v2)
+	      #IO.puts(v==v2)
+	      Enum.any? bidrequest["badv"], fn(v)->
+	      IO.puts(v)
+	      IO.puts(v2)
+	      IO.puts(v==v2)
+	       v2==v end
+	       #IO.puts(JSEX.encode!(cats))
+   end
+   IO.puts("creatives after domain filter")
+    creative=false
+    if Dict.size(creatives) > 0 do
+    IO.puts(JSEX.encode!( creativesWithRightSize))
+    key=  hd( creatives)
+    IO.puts(key)
+    creative= creativesWithRightSize[key]
+    IO.puts(JSEX.encode!( creative))
+    end
     b=""
     if creative do
     IO.puts(JSEX.encode!(creative))

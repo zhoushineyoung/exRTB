@@ -16,7 +16,7 @@ defmodule WebServer.WorkerServer do
 	   320,
 	   50,
 	   "nikolamandic.github.io/favicon.gif",
-	   "nikolamandic.github.io",
+	   "apple.com",
 	   "IAB9-"
 	]
     IO.puts("p1")

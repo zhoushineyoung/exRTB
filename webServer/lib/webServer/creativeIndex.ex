@@ -18,6 +18,7 @@ defmodule WebServer.CreativeIndex do
 	c=%{}
 #	c=Dict.put_new(c,catt,[])
 	a=%{}
+	#adomain=String.to_atom adomain
 	a=Dict.put_new(a,adomain,[])
 	
         adm=Mustache.render(exchangeTemplate,[iurl: "asdasd"])
