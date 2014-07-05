@@ -12,7 +12,7 @@ defmodule WebServer.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:cowboy, :mustache,:erlvolt],
+    [applications: [:cowboy, :mustache,:erlvolt,:exometer],
      mod: {WebServer, []}]
   end
 
