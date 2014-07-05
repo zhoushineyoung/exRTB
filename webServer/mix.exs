@@ -30,7 +30,9 @@ defmodule WebServer.Mixfile do
         {:cowboy, github: "extend/cowboy"},
         {:mustache,github: "NikolaMandic/elixir-mustache"},
         {:erlvolt,github: "VoltDB/voltdb-client-erlang"},
-	{:jsex ,github: "talentdeficit/jsex"}
+	{:jsex ,github: "talentdeficit/jsex"},
+	{:exometer,github: "Feuerlabs/exometer"},
+	{:lager, ~r/.*/, [git: "git://github.com/basho/lager.git", tag: "master",override: true]}
     ]
   end
 end
