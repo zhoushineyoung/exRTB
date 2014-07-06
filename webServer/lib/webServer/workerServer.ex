@@ -7,7 +7,14 @@ defmodule WebServer.WorkerServer do
   end
   
   def start_link( _args) do
+:exometer_report.add_reporter(:exometer_report_graphite,[{:connect_timeout,5000},{:prefix, 'web_stats'},{:host,'172.17.0.8'},{:port,2003},{:api_key,'exRTBnode'}])
 
+:exometer.new([:m1],:counter)
+:exometer.update([:m1],6) 
+
+:exometer_report.subscribe( :exometer_report_graphite, [:m1], :value, 5)
+
+ 
     state=%{:size=> 1}
     stat=%{:size=>state}
     {:ok,pid}=WebServer.CreativeIndex.start()

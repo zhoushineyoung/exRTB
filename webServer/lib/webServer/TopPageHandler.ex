@@ -39,6 +39,7 @@ defmodule WebServer.TopPageHandler do
   end
   
   def handle(req,creatives) do
+    :exometer.update([:requests],1) 
     bidPrice=1
     r = GenEvent.call(:bank,Bank,{:getMoney, bidPrice})
     {_,xx,_} = :cowboy_req.body(req)
