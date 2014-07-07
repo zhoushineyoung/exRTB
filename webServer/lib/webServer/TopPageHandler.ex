@@ -37,18 +37,23 @@ defmodule WebServer.TopPageHandler do
 #    'cur': '{{cur}}'
 #    }", creative ++ [price: price] ++ [cur: cur])
   end
-  
+  @doc ~S"""
+  this function implements bid logic
+
+  """  
   def handle(req,creatives) do
+
     :exometer.update([:requests],1) 
     bidPrice=1
     r = GenEvent.call(:bank,Bank,{:getMoney, bidPrice})
+    
     {_,xx,_} = :cowboy_req.body(req)
     {:ok, bidrequest}=JSEX.decode(xx)
-    
+    IO.puts(bidrequest["id"])
+    Agent.update(:inFlight, &Dict.put(&1, bidrequest["id"], bidPrice))
+    #{bidrequest.id,bidPrice}
      
     #internalCreativeRepresentat
-    
-    
     #creative = pickCreative(creatives)
     #whkey=String.to_atom(bidrequest.w <> bidrequest.h)
     #creative=hd(creatives[whkey][:"IAB"])
@@ -77,11 +82,11 @@ defmodule WebServer.TopPageHandler do
 	       #IO.puts(JSEX.encode!(cats))
    end
      
-     IO.puts("a")
-    IO.puts(JSEX.encode!(cats))
+   IO.puts("a")
+   IO.puts(JSEX.encode!(cats))
     
-    creativesWithRightSize =creativesWithRightSize[hd(cats)]
-    creatives=Dict.keys creativesWithRightSize 
+   creativesWithRightSize =creativesWithRightSize[hd(cats)]
+   creatives=Dict.keys creativesWithRightSize 
    creatives=Enum.reject creatives, fn(v2)->
 	      #IO.puts(v)
 	      #IO.puts(v2)
@@ -130,8 +135,9 @@ defmodule WebServer.TopPageHandler do
       })
       end
     {:ok,req} = :cowboy_req.reply(200,[], b,req)
-    {:ok,req,[]}
+    {:ok,req,creatives}
   end
+
   def terminate(_r,_e,s) do
   {:ok}
   end

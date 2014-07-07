@@ -4,10 +4,11 @@ defmodule WebServer.WorkerServer do
   # See http://elixir-lang.org/docs/stable/Application.html
   # for more information on OTP Applications
   def init() do
+      
   end
   
   def start_link( _args) do
-:exometer_report.add_reporter(:exometer_report_graphite,[{:connect_timeout,5000},{:prefix, 'web_stats'},{:host,'172.17.0.8'},{:port,2003},{:api_key,'exRTBnode'}])
+:exometer_report.add_reporter(:exometer_report_graphite,[{:connect_timeout,5000},{:prefix, 'web_stats'},{:host,'172.17.0.11'},{:port,2003},{:api_key,'exRTBnode'}])
 
 :exometer.new([:requests],:spiral)
  
@@ -25,7 +26,7 @@ defmodule WebServer.WorkerServer do
 	   "nikolamandic.github.io/favicon.gif",
 	   "apple.com",
 	   "IAB9-"
-	]
+	] 
     IO.puts("p1")
     send pid, {:put,item}
     IO.puts("g1")

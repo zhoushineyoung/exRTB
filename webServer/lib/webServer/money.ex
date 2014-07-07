@@ -10,6 +10,7 @@
 #    {:ok, [x|messages]}
 #  end
 #end
+
 defmodule Bank do
   use GenEvent
   def helloWPrototype() do
