@@ -17,11 +17,15 @@ defmodule WebServer.WinHandler do
   end
   def handle(req,state) do
   :gen_event.call(:"money",{:registerWin})
-  Agent.update(:inFlight, fn inFlight -> 
-    Dict.delete(inFlight, :bidreqid)
-    end
-    )
+  auctionID=false
+  {auctionID, Req2} = :cowboy_req.qs_val("auctionID", req)
+  if auctionID do
+  Agent.update(:inFlight, fn (d)-> 
+    Dict.delete(d, auctionID)
+end
     
+    )
+   end 
   IO.puts :cowboy.body(req)
   #decide
 
