@@ -21,6 +21,9 @@ defmodule WebServer.WinHandler do
   {auctionID, Req2} = :cowboy_req.qs_val("auctionID", req)
   if auctionID do
   Agent.update(:inFlight, fn (d)-> 
+    priceInFlight=Dict.get(auctionID)
+    ##now send to money manager
+    :gen_event.call(:money,{:registerWin,priceInFlight})
     Dict.delete(d, auctionID)
 end
     
