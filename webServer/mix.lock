@@ -1,7 +1,7 @@
 %{"afunix": {:git, "https://github.com/tonyrog/afunix.git", "8ce4763133c4f994e2769190737da4b61706fbc1", [ref: "HEAD"]},
   "bear": {:git, "git://github.com/boundary/bear.git", "5f998064d178b1b8d01ed90c228d50d8097b12d3", [tag: "0.8.1"]},
-  "cowboy": {:git, "git://github.com/extend/cowboy.git", "1ad3aae4d5459ee991805d16a3837e1da2ba96ff", []},
-  "cowlib": {:git, "git://github.com/extend/cowlib.git", "f58340a0044856bb508df03cfe94cf79308380a2", [ref: "0.6.1"]},
+  "cowboy": {:git, "git://github.com/extend/cowboy.git", "fd423eb1705ec8afb867554e02d0ef5a998f28c6", []},
+  "cowlib": {:git, "git://github.com/extend/cowlib.git", "e2ffefe828b918486e2cd76e44c54ae9b62c616e", [ref: "0.6.2"]},
   "edown": {:git, "git://github.com/esl/edown.git", "4d18dc4bec89c20c0ba8cab6884ce690ca606f4a", [ref: "HEAD"]},
   "erlvolt": {:git, "git://github.com/VoltDB/voltdb-client-erlang.git", "5f182980386ff90dfde88a273a49712cb4018434", []},
   "exjson": {:git, "git://github.com/guedes/exjson.git", "9d428acfa2b55d070576e71cef55e2e0bad8c5ab", []},
@@ -15,6 +15,6 @@
   "meck": {:git, "git://github.com/eproxus/meck", "dde759050eff19a1a80fd854d7375174b191665d", [tag: "0.8.2"]},
   "mustache": {:git, "git://github.com/NikolaMandic/elixir-mustache.git", "4914e70293b46a9349fc53e9a03cbd61b762b36e", []},
   "netlink": {:git, "git://github.com/Feuerlabs/netlink.git", "e6d208c2d9ad0c16843584006812b9fc99b65d0a", [ref: "HEAD"]},
-  "ranch": {:git, "git://github.com/extend/ranch.git", "5df1f222f94e08abdcab7084f5e13027143cc222", [ref: "0.9.0"]},
+  "ranch": {:git, "git://github.com/extend/ranch.git", "3189ef2d47843945efc96c224963380462c33d40", [ref: "0.10.0"]},
   "setup": {:git, "git://github.com/uwiger/setup.git", "c5e603dece440f0afab6a15e321482adacd4f11a", [branch: "master"]},
   "voltdb": {:git, "git://github.com/VoltDB/voltdb-client-erlang.git", "5f182980386ff90dfde88a273a49712cb4018434", []}}
