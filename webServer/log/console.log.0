@@ -1,0 +1,106 @@
+2014-07-06 00:47:41.528 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 00:47:41.548 [info] <0.273.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 00:47:41.548 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 03:18:10.299 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 03:18:10.312 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 03:18:10.313 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 03:19:39.585 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 03:19:39.599 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 03:19:39.599 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 03:32:17.721 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 03:32:17.735 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 03:32:17.735 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 03:37:32.723 [info] <0.348.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,<<"web_stats">>},{host,<<"172.17.0.8">>},{port,2003}]
+2014-07-06 03:37:32.723 [warning] <0.6.0> lager_error_logger_h dropped 63 messages in the last second that exceeded the limit of 50 messages/sec
+2014-07-06 03:37:32.723 [info] <0.350.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: []
+2014-07-06 03:37:32.723 [error] <0.348.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:37:32.723 [info] <0.351.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: []
+2014-07-06 03:37:32.724 [error] <0.350.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:37:32.724 [error] <0.351.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:38:33.686 [info] <0.353.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,<<"web_stats">>},{host,<<"172.17.0.8">>},{port,2003},{api_key,<<"123">>}]
+2014-07-06 03:38:33.686 [error] <0.353.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours exited with reason: bad argument in gen_tcp:connect/4 line 145
+2014-07-06 03:38:33.686 [info] <0.354.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: []
+2014-07-06 03:38:33.687 [info] <0.355.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: []
+2014-07-06 03:38:33.687 [error] <0.354.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:38:33.687 [error] <0.355.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:39:42.325 [info] <0.358.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,<<"web_stats">>},{host,<<"172.17.0.8">>},{port,2003},{api_key,"267d121c-8387-459a-9326-000000000000"}]
+2014-07-06 03:39:42.326 [error] <0.358.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours exited with reason: bad argument in gen_tcp:connect/4 line 145
+2014-07-06 03:39:42.326 [info] <0.359.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: []
+2014-07-06 03:39:42.326 [error] <0.359.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:39:42.326 [info] <0.361.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: []
+2014-07-06 03:39:42.326 [error] <0.361.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:40:02.071 [info] <0.363.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"267d121c-8387-459a-9326-000000000000"}]
+2014-07-06 06:48:39.792 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 06:48:39.803 [info] <0.245.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 06:48:39.803 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 06:48:39.806 [info] <0.252.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"267d121c-8387-459a-9326-000000000000"}]
+2014-07-06 06:49:17.524 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 06:49:17.536 [info] <0.245.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 06:49:17.536 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 06:49:17.540 [info] <0.252.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,[101,120,82,84,66|<0.251.0>]}]
+2014-07-06 06:51:53.854 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 06:51:53.866 [info] <0.245.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 06:51:53.866 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 06:51:53.869 [info] <0.252.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 06:53:00.310 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 06:53:00.322 [info] <0.245.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 06:53:00.322 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 06:53:00.326 [info] <0.252.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 08:58:58.668 [info] <0.252.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.7838>})
+2014-07-06 08:58:58.668 [info] <0.252.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.7838>}
+2014-07-06 08:59:33.716 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 08:59:33.730 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 08:59:33.730 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 08:59:33.736 [info] <0.222.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 09:06:15.845 [info] <0.222.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.7177>})
+2014-07-06 09:06:15.845 [info] <0.222.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.7177>}
+2014-07-06 09:06:59.870 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 09:06:59.884 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 09:06:59.885 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 09:06:59.891 [info] <0.222.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 09:12:25.159 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 09:12:25.171 [info] <0.251.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 09:12:25.171 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 09:12:25.174 [info] <0.258.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 12:02:46.161 [info] <0.258.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.8044>})
+2014-07-06 12:02:46.161 [info] <0.258.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.8044>}
+2014-07-06 12:03:23.935 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 12:03:23.950 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 12:03:23.950 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 12:03:23.956 [info] <0.222.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 12:03:24.002 [warning] <0.6.0> lager_error_logger_h dropped 65 messages in the last second that exceeded the limit of 50 messages/sec
+2014-07-06 12:03:24.002 [info] <0.7.0> Application webServer started on node nonode@nohost
+2014-07-06 12:04:20.627 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 12:04:20.639 [info] <0.245.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 12:04:20.639 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 12:04:20.642 [info] <0.252.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 12:15:40.176 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 12:15:40.190 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 12:15:40.190 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 12:15:40.196 [info] <0.222.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 12:23:00.798 [info] <0.222.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.7213>})
+2014-07-06 12:23:00.798 [info] <0.222.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.7213>}
+2014-07-06 12:28:10.598 [info] <0.222.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.7923>})
+2014-07-06 12:28:10.599 [info] <0.222.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.7923>}
+2014-07-06 12:31:51.190 [info] <0.222.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.8110>})
+2014-07-06 12:31:51.190 [info] <0.222.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.8110>}
+2014-07-06 12:35:46.049 [info] <0.222.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.9669>})
+2014-07-06 12:35:46.049 [info] <0.222.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.9669>}
+2014-07-06 12:38:49.665 [info] <0.222.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.10993>})
+2014-07-06 12:38:49.665 [info] <0.222.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.10993>}
+2014-07-06 12:39:08.081 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 12:39:08.095 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 12:39:08.095 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 12:39:08.101 [info] <0.222.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 12:44:01.449 [info] <0.222.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.7213>})
+2014-07-06 12:44:01.449 [info] <0.222.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.7213>}
+2014-07-06 12:44:54.653 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 12:44:54.667 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 12:44:54.667 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 12:44:54.673 [info] <0.222.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]
+2014-07-06 12:52:08.772 [info] <0.222.0>@exometer_report:reporter_loop:1062 Custom invocation: exometer_report_graphite({tcp_closed,#Port<0.7213>})
+2014-07-06 12:52:08.772 [info] <0.222.0>@exometer_report_graphite:exometer_info:100 Unknown info: {tcp_closed,#Port<0.7213>}
+2014-07-06 12:54:20.635 [info] <0.7.0> Application lager started on node nonode@nohost
+2014-07-06 12:54:20.649 [info] <0.215.0>@exometer_report:do_start_reporters:402 Starting reporters with []
+2014-07-06 12:54:20.649 [info] <0.7.0> Application exometer started on node nonode@nohost
+2014-07-06 12:54:20.656 [info] <0.222.0>@exometer_report_graphite:exometer_init:53 Exometer Graphite Reporter; Opts: [{connect_timeout,5000},{prefix,"web_stats"},{host,"172.17.0.8"},{port,2003},{api_key,"exRTBnode"}]

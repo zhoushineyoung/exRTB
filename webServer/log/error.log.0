@@ -1,0 +1,9 @@
+2014-07-06 03:37:32.723 [error] <0.348.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:37:32.724 [error] <0.350.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:37:32.724 [error] <0.351.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:38:33.686 [error] <0.353.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours exited with reason: bad argument in gen_tcp:connect/4 line 145
+2014-07-06 03:38:33.687 [error] <0.354.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:38:33.687 [error] <0.355.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:39:42.326 [error] <0.358.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours exited with reason: bad argument in gen_tcp:connect/4 line 145
+2014-07-06 03:39:42.326 [error] <0.359.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160
+2014-07-06 03:39:42.326 [error] <0.361.0> CRASH REPORT Process exometer_report_graphite with 0 neighbours crashed with reason: {required,api_key} in exometer_report_graphite:get_opt/2 line 160

@@ -1,0 +1,144 @@
+2014-07-06 03:37:32 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.348.0>
+    registered_name: exometer_report_graphite
+    exception error: {{required,api_key},[{exometer_report_graphite,get_opt,2,[{file,"src/exometer_report_graphite.erl"},{line,160}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,54}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 833
+  neighbours:
+2014-07-06 03:37:32 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.350.0>
+    registered_name: exometer_report_graphite
+    exception error: {{required,api_key},[{exometer_report_graphite,get_opt,2,[{file,"src/exometer_report_graphite.erl"},{line,160}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,54}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 450
+  neighbours:
+2014-07-06 03:37:32 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.351.0>
+    registered_name: exometer_report_graphite
+    exception error: {{required,api_key},[{exometer_report_graphite,get_opt,2,[{file,"src/exometer_report_graphite.erl"},{line,160}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,54}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 462
+  neighbours:
+2014-07-06 03:38:33 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.353.0>
+    registered_name: exometer_report_graphite
+    exception exit: {badarg,[{gen_tcp,connect,4,[{file,"gen_tcp.erl"},{line,145}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,60}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 934
+  neighbours:
+2014-07-06 03:38:33 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.354.0>
+    registered_name: exometer_report_graphite
+    exception error: {{required,api_key},[{exometer_report_graphite,get_opt,2,[{file,"src/exometer_report_graphite.erl"},{line,160}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,54}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 450
+  neighbours:
+2014-07-06 03:38:33 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.355.0>
+    registered_name: exometer_report_graphite
+    exception error: {{required,api_key},[{exometer_report_graphite,get_opt,2,[{file,"src/exometer_report_graphite.erl"},{line,160}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,54}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 462
+  neighbours:
+2014-07-06 03:39:42 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.358.0>
+    registered_name: exometer_report_graphite
+    exception exit: {badarg,[{gen_tcp,connect,4,[{file,"gen_tcp.erl"},{line,145}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,60}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 1024
+  neighbours:
+2014-07-06 03:39:42 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.359.0>
+    registered_name: exometer_report_graphite
+    exception error: {{required,api_key},[{exometer_report_graphite,get_opt,2,[{file,"src/exometer_report_graphite.erl"},{line,160}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,54}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 450
+  neighbours:
+2014-07-06 03:39:42 =CRASH REPORT====
+  crasher:
+    initial call: exometer_proc:-spawn_process/2-fun-0-/0
+    pid: <0.361.0>
+    registered_name: exometer_report_graphite
+    exception error: {{required,api_key},[{exometer_report_graphite,get_opt,2,[{file,"src/exometer_report_graphite.erl"},{line,160}]},{exometer_report_graphite,exometer_init,1,[{file,"src/exometer_report_graphite.erl"},{line,54}]},{exometer_report,reporter_launch,2,[{file,"src/exometer_report.erl"},{line,1005}]},{proc_lib,init_p,3,[{file,"proc_lib.erl"},{line,224}]}]}
+    ancestors: [exometer_report,exometer_sup,<0.211.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 458
+  neighbours:
